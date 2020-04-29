@@ -1,46 +1,124 @@
 
 
 body {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  background-color: #fcbf49;
   min-width: 360px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
 }
+
+.header_container {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+}
+#logo {
+  display: block;
+  margin: 0 auto;
+  width: 500px;
+  height: 25%;
+}
+
+#sub_header {
+  font-family: 'Raleway' , sans-serif;
+  font-size: 24px;
+  text-align: center;
+  margin: 0.5em 0;
+}
+
 
 form {
   width: 320px;
   display: block;
-  margin: 0 auto;
+  margin: 32px auto;
 }
 
 form>input,
-form>textarea, 
+form>textarea,
 form>label {
+  font-family: 'Source Sans Pro', sans-serif;
   width: 100%;
   display: block;
-  margin: .5rem 0;
+  margin: .75rem 0;
 }
 
 form>label {
-  color: rgba(0,0,0,.7);
-  font-size: 1rem;
+  color: rgba(0,0,0,.9);
+  font-size: 1.25rem;
   font-weight: bold;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 form>input,
 form>textarea {
   padding: .5rem;
   border-radius: 4px;
-  border: 1px solid rgba(0,0,0,.1);
+  border: 1px solid rgba(0,0,0,.3);
 }
 
 form>button {
-  padding: .5rem 1.5rem;
+  padding: .75rem 1.5rem;
   background: #090;
   color: #fff;
   border: none;
   font-weight: 900;
   border-radius: 4px;
   cursor: pointer;
+}
+
+/** Add more engaging visuals **/
+
+#button {
+  margin: 24px auto;
+  font-size: 24px;
+  background-color: #2a9d8f;
+  border: none;
+  font-family: 'Source Sans Pro', Arial, sans-serif;
+  text-align: center;
+  padding: 16px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  align-items: center;
+}
+#button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+/** Creates the arrow if user were to submit form **/
+#button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+#button:hover span {
+  padding-right: 20px;
+}
+#button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.contact-details-container {
+  padding-right: 0.5em;
+  text-align: right;
+  font-size: 20px;
+  font-family: 'Source Sans Pro', Arial, sans-serif;
+}
+.contact-details-container a:link {
+  color: black;
+  background-color: transparent;
+}
+.contact-details-container a:visited {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+#secretContainer {
+  display: none;
+  text-align: center;
 }

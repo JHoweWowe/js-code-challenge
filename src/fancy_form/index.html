@@ -1,8 +1,23 @@
+<!DOCTYPE html>
 <html>
 
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Fancy Form</title>
+  <!-- Meta Tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Justin Howe">
+  <meta name="description" content="Web application to send BitCoin currency using SMS OTP">
+  <title>CryptoCurrency SMS Payment Form</title>
+
+  <!-- Add favicon if needed -->
+  <link rel="shortcut icon" href="./images/favicon.png"/>
+
+  <!-- Link to Google Fonts API -->
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Raleway|Oswald">
+
+
+  <!-- Add BootStrap if needed...but comes at expense of rendering time -->
 
   <!-- You may add more stuff here -->
   <script src="script.js"></script>
@@ -10,20 +25,45 @@
 </head>
 
 <body>
+  <div class="header_container">
+    <img id="logo" src="./images/cryptotext_logo_final.png"/>
+    <h4 id="sub_header">A simple cryptocurrency payment form designed for convenience and efficiency.</h4>
+    <h4 id="test_sub_header"></h4>
+  </div>
 
   <!-- You may wrap the form in your own elements if necessary. -->
-  <form onsubmit="return !1">
-    <label for="input-address">Bitcoin Address</label>
-    <input id="input-address" placeholder="16q4PinynazaMYfv24juNLkbjkDQxJo2dc" />
+  <section class = "form">
+    <div class="form_container">
+      <form name="paymentForm" onsubmit=validateform()>
+        <label for="input-address">Bitcoin Address:</label>
+        <input text="text" id="input-address" name="bitCoinAddress" placeholder="16q4PinynazaMYfv24juNLkbjkDQxJo2dc" />
 
-    <label for="input-amount">Amount to send</label>
-    <input id="input-amount" placeholder="0.0000" />
+        <label for="input-amount">Send Amount ($):</label>
+        <input id="input-amount" name="amount" placeholder="0.00" />
 
-    <label for="input-otp">OTP Authentication</label>
-    <input type="number" id="input-otp" placeholder="SMS OTP" />
+        <label for="input-otp">Contact Number:</label>
+        <input type="number" name="phoneNumber" id="input-otp" placeholder="Enter a Singapore phone number (8 digits)" />
 
-    <button>SEND BTC</button>
-  </form>
+        <button id="button" type ="submit"><span>Send OTP</span></button>
+
+      </form>
+    </div>
+  </section>
+
+  <div id="secretContainer" class = "hidden-text-container">
+    <h4 id="secretText">A OTP number has been generated on your phone!</h4>
+  </div>
+
+  <!-- Footer for Contact Details -->
+  <footer class = "contact-details-container">
+    <div class="row-text">
+        <h3 id="contact-details">Having problems with submitting the form? <br> Don't hesistate to contact
+          <a href="https://www.ngnrs.io/" target="_top">NGNRS Solutions</a>!
+        </h3>
+        <h4 id="copyright-details">&copy 2020 <a href="https://www.justhowe.com/" target="_blank">Justin Howe</a><br></h4>
+      </div>
+  </footer>
+
 </body>
 
 </html>

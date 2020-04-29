@@ -1,8 +1,14 @@
 // Problem 1 C
-// Task: Provide 3 unique implementations of the following function.
-// Input: `n` - any integer from `0` to `Number.MAX_SAFE_INTEGER`.
-// Output: `return` - summation to `n`, i.e. sum_to_n(5) === 1 + 2 + 3 + 4 + 5 === 15.
+// My solution: Use arithmetic series formula
+// This works as the first positive number is 1 and last number is n
+// Time complexity: O(1)
 
 var sum_to_n = function(n) {
-    // your code here
-};
+  var number = (n/2)*(1+n);
+  return number;
+}
+
+/** Tester code
+  * var z = sum_to_n(5)
+  * console.log(z);
+**/

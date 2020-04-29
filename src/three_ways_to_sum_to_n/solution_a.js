@@ -1,8 +1,17 @@
 // Problem 1 A
-// Task: Provide 3 unique implementations of the following function.
-// Input: `n` - any integer from `0` to `Number.MAX_SAFE_INTEGER`.
-// Output: `return` - summation to `n`, i.e. sum_to_n(5) === 1 + 2 + 3 + 4 + 5 === 15.
+// My solution: Use for loops to find summation to n
+// Time complexity: O(n)
+// Function will be called n times so not efficent solution
 
 var sum_to_n = function(n) {
-    // your code here
-};
+  var number = 0;
+  for (var i = 0; i <= n; i++) {
+    number += i;
+  }
+  return number;
+}
+
+/** Tester code
+  * var x = sum_to_n(5)
+  * console.log(x);
+**/
